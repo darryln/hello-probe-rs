@@ -1,0 +1,32 @@
+{
+    /* 
+     * Requires the Rust Language Server (RLS) and Cortex-Debug extensions
+     * https://marketplace.visualstudio.com/items?itemName=rust-lang.rust
+     * https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug
+     */
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "preLaunchTask": "${defaultBuildTask}",
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "name": "probe_rs Executable launch example",
+            "cwd": "${workspaceFolder}",
+            "programBinary": "target/thumbv7em-none-eabihf/debug/hello",
+            "chip": "STM32F767ZITx",
+            "connectUnderReset": true,
+            "speed": 24000, //!MODIFY (or remove)
+            //"probe": "PID:VID:<Serial>", //!MODIFY (or remove)
+            "runtimeExecutable": "probe-rs-debugger",
+            "runtimeArgs": [
+                "debug",
+                "--dap"
+            ],
+            "coreIndex": 0,
+            "flashingEnabled": true,
+            "resetAfterFlashing": true,
+            "haltAfterReset": true,
+            "consoleLogLevel": "Info", //Error, Warn, Info, Debug, Trace 
+        }
+    ]
+}

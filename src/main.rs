@@ -1,24 +1,13 @@
-#![no_std]
 #![no_main]
+#![no_std]
 
-use cortex_m::asm;
-use cortex_m_rt::entry;
-use rtt_target::{rtt_init_print, rprintln};
-use panic_probe as _;
+use hello as _;
 
-#[entry]
+#[cortex_m_rt::entry]
 fn main() -> ! {
-    rtt_init_print!();
-    rprintln!("Hello, world!");
-
-    for x in 1..=5 { 
-        rprintln!("{}", x)
-    }
-
-    rprintln!("finished!");
+    defmt::println!("Hello, world!");
 
     loop {
-        asm::bkpt();
-        //asm::udf();
+        hello::exit();
     }
 }

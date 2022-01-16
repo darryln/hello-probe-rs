@@ -25,7 +25,7 @@
             "coreIndex": 0,
             "flashingEnabled": true,
             "resetAfterFlashing": true,
-            "haltAfterReset": true,
+            //"haltAfterReset": true,  // set bp in main 
             "consoleLogLevel": "Info", //Error, Warn, Info, Debug, Trace 
         }
     ]

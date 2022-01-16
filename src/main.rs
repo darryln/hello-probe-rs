@@ -17,6 +17,8 @@ fn main() -> ! {
 
     rprintln!("finished!");
 
-    //asm::bkpt()
-    asm::udf();
+    loop {
+        asm::bkpt();
+        //asm::udf();
+    }
 }

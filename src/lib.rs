@@ -19,6 +19,7 @@ fn panic() -> ! {
 pub fn exit() -> ! {
     loop {
         cortex_m::asm::bkpt();
+        //cortex_m::asm::nop();
     }
 }
 

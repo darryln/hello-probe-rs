@@ -20,8 +20,8 @@ defmt-rtt = "0.3.0"
 panic-probe = { version = "0.3.0", features = ["print-defmt"] }
 # TODO(4) enter your HAL here
 # some-hal = "1.2.3"
-#stm32f7xx-hal = { version = "0.6.0", features = ["stm32f767", "rt"], path = "../stm32f7xx-hal" }
-stm32f7xx-hal = { version = "0.6.0", features = ["stm32f767", "rt"]}
+stm32f7xx-hal = { version = "0.6.0", features = ["stm32f767", "rt"], path = "../stm32f7xx-hal" }
+#stm32f7xx-hal = { version = "0.6.0", features = ["stm32f767", "rt"]}
 
 [dev-dependencies]
 defmt-test = "0.3.0"

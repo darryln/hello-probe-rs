@@ -17,6 +17,7 @@ fn panic() -> ! {
 
 /// Terminates the application and makes `probe-run` exit with exit-code = 0
 pub fn exit() -> ! {
+    defmt::println!("program exit");
     loop {
         //cortex_m::asm::bkpt();
         cortex_m::asm::nop();
